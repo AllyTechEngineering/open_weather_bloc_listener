@@ -63,7 +63,7 @@ class WeatherApiServices {
 
     try {
       final http.Response response = await httpClient.get(uri);
-
+      print('This is the api call: $uri');
       if (response.statusCode != 200) {
         throw Exception(httpErrorHandler(response));
       }
